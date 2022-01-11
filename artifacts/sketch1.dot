@@ -1,0 +1,34 @@
+digraph structs {
+
+# Fontlist https://web.mit.edu/jmorzins/www/fonts.html
+# 
+# Arial / Helvetica
+# Courier New / Courier
+# Times New Roman / Times
+#
+# Verdana
+# Tahoma
+# Georgia
+# Comic Sans MS
+# Trebuchet MS
+# Arial Black
+# Impact
+
+    node[shape=plaintext]
+    abc [label=<
+        <TABLE BORDER="1" bgcolor="lightblue" CELLBORDER="0" CELLSPACING="0" style='rounded'>
+        <TR><TD border="1" sides="B" align="center"><font face="Helvetica" point-size="12">A Big Component</font></TD></TR>
+        <TR><TD port="a1" align="left"><font face="Courier" point-size="10">Attribute_1</font></TD></TR>
+        <TR><TD port="a2" align="left"><font face="Courier" point-size="10">Attribute_2</font></TD></TR>
+        </TABLE>>];
+        
+    asc [label=<
+        <TABLE BORDER="1" bgcolor="bisque" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" style='rounded'>
+        <TR><TD border="1" sides="B" align="center">&lt;xyz&gt;</TD></TR>
+        <TR><TD port="a1" align="left"><i>Attribute_1</i></TD></TR>
+        <TR><TD port="a2" align="left"><i>Attribute_2</i></TD></TR>
+        </TABLE>>];
+        
+    abc:a1:e -> asc:a2:e [headlabel=<<font color="red" point-size="9" face="Helvetica">label</font>> labeldistance="2" labelangle="-50"]
+    asc:a1:_ -> abc:a2:c;
+}

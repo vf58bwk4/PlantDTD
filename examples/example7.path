@@ -1,0 +1,7 @@
+$coupler_nvt -> $coupler_gf_ap
+
+$coupler_gf_ap[coupler_number]:se -> $coupler_nvt[coupling_ratio][2][miner]:n
+
+$arrays[1][2] -> $gruppen[one][two][three].five:nw
+
+$entityL -> $entityR

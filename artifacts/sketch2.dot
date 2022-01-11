@@ -1,0 +1,90 @@
+# Fontlist https://web.mit.edu/jmorzins/www/fonts.html
+# 
+# Arial / Helvetica
+# Courier New / Courier
+# Times New Roman / Times
+#
+# Verdana
+# Tahoma
+# Georgia
+# Comic Sans MS
+# Trebuchet MS
+# Arial Black
+# Impact
+
+digraph structs {
+    rankdir="LR";
+    node[shape=plaintext];
+    edge [style=dotted arrowhead=vee, arrowtail=dot, dir=both, arrowsize=0.5];
+
+    j0v0 [label=<<font face="courier" point-size="10">
+        <table port="t" border="1" cellborder="0" cellspacing="0" cellpadding="4" style="rounded">
+        <tr><td port="p1" align="right">0</td><td></td></tr><hr/>
+        <tr><td port="p2" align="right">...</td><td></td></tr><hr/>
+        <tr><td port="p2" align="right">123</td><td></td></tr>
+        </table></font>>];
+
+    j0v1v1 [label=<<font face="courier" point-size="10">
+        <table port="t" border="1" cellborder="0" cellspacing="0" cellpadding="4" style="rounded">
+        <tr><td align="left">emmsHvtAn</td><td port="p1"></td><td></td></tr><hr/>
+        <tr><td align="left">gfHvt</td><td port="p2"></td><td></td></tr><hr/>
+        <tr><td align="left">gfInnenKabel</td><td port="p3"></td><td></td></tr><hr/>
+        <tr><td align="left">messWdmGestell</td><td port="p4"></td><td></td></tr>
+        </table></font>>];
+
+    j0v2v1 [label=<<font face="courier" point-size="10">
+        <table port="t" border="1" cellborder="0" cellspacing="0" cellpadding="4" style="rounded">
+        <tr><td align="left">bgtAn</td></tr><hr/>
+        <tr><td align="left">kasAn</td></tr><hr/>
+        <tr><td align="left">platzAn</td></tr><hr/>
+        <tr><td align="left">reiheAn</td></tr><hr/>
+        <tr><td align="left">stiftAn</td></tr><hr/>
+        <tr><td align="left">comment</td><td port="p1"></td><td></td></tr>
+        </table></font>>];
+        
+    j0v3v1 [label=<<font face="courier" point-size="10">
+        <table port="t" border="1" cellborder="0" cellspacing="0" cellpadding="4" style="rounded">
+        <tr><td align="left">tpl</td><vr/><td>string</td></tr>
+        </table></font>>];
+        
+    j0v2v2 [label=<<font face="courier" point-size="10">
+        <table port="t" border="1" cellborder="0" cellspacing="0" cellpadding="4" style="rounded">
+        <tr><td align="left">tpl</td><vr/><td>string</td></tr>
+        </table></font>>];
+
+    j0v2v3 [label=<<font face="courier" point-size="10">
+        <table port="t" border="1" cellborder="0" cellspacing="0" cellpadding="4" style="rounded">
+        <tr><td align="left">fasergfi1</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">fasergfi2</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">id</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">kabelnamegfi1</td><vr/><td align="left">string</td></tr><hr/>
+        <tr><td align="left">kabelnamegfi2</td><vr/><td align="left">string</td></tr><hr/>
+        <tr><td align="left">popBgt</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">popKas</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">popPlatz</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">popReihe</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">popStift</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">popTpl</td><vr/><td align="left">string</td></tr><hr/>
+        <tr><td align="left">version</td><vr/><td align="left">0</td></tr>
+        </table></font>>];
+        
+    j0v2v4 [label=<<font face="courier" point-size="10">
+        <table port="t" border="1" cellborder="0" cellspacing="0" cellpadding="4" style="rounded">
+        <tr><td align="left">bgt</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">gebRaum</td><vr/><td align="left">string</td></tr><hr/>
+        <tr><td align="left">kas</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">platz</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">reihe</td><vr/><td align="left">0</td></tr><hr/>
+        <tr><td align="left">stift</td><vr/><td align="left">0</td></tr>
+        </table></font>>];
+        
+    j0v0:p1:e -> j0v1v1:t;
+    j0v1v1:p1:e -> j0v2v1:t;
+    j0v1v1:p2:e -> j0v2v2:t;
+    j0v1v1:p3:e -> j0v2v3:t;
+    j0v2v1:p1:e -> j0v3v1:t;
+    j0v1v1:p4:e -> j0v2v4:t;
+
+#    abc:a1:e -> asc:a2:e [headlabel=<<font color="red" point-size="9" face="Helvetica">label</font>> labeldistance="2" labelangle="-50"]
+#    asc:a1:w -> abc:a2:w;
+}
